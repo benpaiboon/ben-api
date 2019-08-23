@@ -1,0 +1,25 @@
+{
+  "name": "ben-api",
+  "version": "1.0.0",
+  "description": "Open Source API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "install-winser": "winser -i -s -c",
+    "uninstall-winser": "winser -r -x -s"
+  },
+  "author": "Paiboon Sirawit",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0",
+    "serve-favicon": "^2.5.0",
+    "winser": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
