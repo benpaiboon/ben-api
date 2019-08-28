@@ -3,23 +3,23 @@ const express = require('express');
 const router = express.Router();
 
 // Init Controller
-const helloController = require('../CONTROLLER/hello.controller');
+const HelloController = require('../CONTROLLER/hello.controller');
 
 // Routes
 
 // GET All
-router.get('/hello', helloController.getAll);
+router.get('/hello', HelloController.getHello);
 
 // GET One
-router.get('/hello/:hello_id', helloController.getOne);
+router.get('/hello/:hello_id', HelloController.getHelloById);
 
 // POST One
-router.post('/hello', helloController.createOne);
+router.post('/hello', HelloController.createHello);
 
 // PUT One
-router.put('/hello/:hello_id', helloController.editOne);
+router.put('/hello/:hello_id', HelloController.updateHello);
 
 // DELETE One
-router.delete('/hello/:hello_id', helloController.removeOne);
+router.delete('/hello/:hello_id', HelloController.deleteHello);
 
 module.exports = router;

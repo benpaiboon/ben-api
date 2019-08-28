@@ -4,8 +4,10 @@
   "description": "Open Source API",
   "main": "server.js",
   "scripts": {
+    "client": "cd CLIENT && npm start --prefix web",
     "start": "node server.js",
     "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "install-winser": "winser -i -s -c",
     "uninstall-winser": "winser -r -x -s"
   },
@@ -13,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.3.0",
