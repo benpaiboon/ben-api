@@ -1,9 +1,9 @@
 {
-  "env": "dev",
+  "env": "env",
   "root_api": "/api",
   "server_port": 5000,
-  "prod_favicon_path": "client/web/build/favicon.ico",
-  "prod_client_path": "client/web/build",
+  "prod_favicon_path": "CLIENT/web/build/favicon.ico",
+  "prod_client_path": "CLIENT/web/build",
   "mongo_uri": "mongodb://localhost:27017",
   "db_name": "hello-db"
 }

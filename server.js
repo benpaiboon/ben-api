@@ -1,6 +1,7 @@
 // Init dependencies
 const cors = require('cors');
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
@@ -10,6 +11,7 @@ const path = require('path');
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan('combined'));
 
 // Load config
 const routes = require('./CONFIG/route.config');
