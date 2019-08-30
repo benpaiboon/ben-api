@@ -1,8 +1,8 @@
 // Init DataContext
-const DataContext = require('../DATA.CONTEXT/data.context');
+const DataContext = require('../data.context/data.context');
 
 // Injectable Service
-const HelloService = require('../SERVICE/hello.service');
+const HelloService = require('../services/hello.service');
 
 // Send response to Router
 module.exports = HelloController = {

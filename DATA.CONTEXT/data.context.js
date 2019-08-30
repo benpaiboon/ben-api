@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const keyConfig = require('../CONFIG/key.config.json');
+const keyConfig = require('../configs/key.config.json');
 const connection = MongoClient.connect(keyConfig.mongo_uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const openConnection = async () => {

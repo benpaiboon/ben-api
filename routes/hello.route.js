@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Init Controller
-const HelloController = require('../CONTROLLER/hello.controller');
+const HelloController = require('../controllers/hello.controller');
 
 // Routes
 

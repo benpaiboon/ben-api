@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 
 // Load config
-const routes = require('./CONFIG/route.config');
-const keyConfig = require('./CONFIG/key.config.json');
+const routes = require('./configs/route.config');
+const keyConfig = require('./configs/key.config.json');
 
 // Request any routes depend on URL path
 routes.map(route => { app.use(keyConfig.root_api, route); });
