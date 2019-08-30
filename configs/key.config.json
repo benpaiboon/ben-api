@@ -1,0 +1,10 @@
+{
+  "env": "prod",
+  "root_api": "/api",
+  "server_port": 5000,
+  "prod_favicon_path": "build/favicon.ico",
+  "prod_client_path": "build",
+  "client_build_path": "client/build",
+  "mongo_uri": "mongodb://localhost:27017",
+  "db_name": "hello-db"
+}
