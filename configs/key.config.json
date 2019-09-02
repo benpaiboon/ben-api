@@ -1,5 +1,5 @@
 {
-  "env": "prod",
+  "env": "dev",
   "root_api": "/api",
   "server_port": 5000,
   "prod_favicon_path": "build/favicon.ico",

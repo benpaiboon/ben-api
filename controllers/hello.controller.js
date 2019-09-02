@@ -1,5 +1,5 @@
-// Init DataContext
-const DataContext = require('../data.context/data.context');
+// Init MongoContext
+const MongoContext = require('../data.context/mongo.context');
 
 // Injectable Service
 const HelloService = require('../services/hello.service');
@@ -8,7 +8,7 @@ const HelloService = require('../services/hello.service');
 module.exports = HelloController = {
   getHello: async (req, res) => {
     try {
-      const doc = await DataContext.findAll('hello_col');
+      const doc = await MongoContext.findAll('hello_col');
       return await res.status(200).send(doc);
     } catch (error) {
       console.error(error);
@@ -18,7 +18,7 @@ module.exports = HelloController = {
   getHelloById: async (req, res) => {
     try {
       const filter = { hello_id: req.params.hello_id };
-      const doc = await DataContext.findOne('hello_col', filter);
+      const doc = await MongoContext.findOne('hello_col', filter);
       return await res.status(200).send(doc);
     } catch (error) {
       console.error(error);
@@ -31,7 +31,7 @@ module.exports = HelloController = {
         hello_id: await HelloService.generateHelloId(),
         name: req.body.name
       }
-      const doc = await DataContext.insertOne('hello_col', insertObj);
+      const doc = await MongoContext.insertOne('hello_col', insertObj);
       return await res.status(200).send(doc);
 
     } catch (error) {
@@ -43,7 +43,7 @@ module.exports = HelloController = {
     try {
       const filter = { hello_id: req.params.hello_id };
       const updateObj = { $set: { name: req.body.name } };
-      const doc = await DataContext.updateOne('hello_col', filter, updateObj);
+      const doc = await MongoContext.updateOne('hello_col', filter, updateObj);
       return await res.status(200).send(doc);
     } catch (error) {
       console.error(error);
@@ -53,7 +53,7 @@ module.exports = HelloController = {
   deleteHello: async (req, res) => {
     try {
       const deleteObj = { hello_id: req.params.hello_id }
-      const doc = await DataContext.deleteOne('hello_col', deleteObj);
+      const doc = await MongoContext.deleteOne('hello_col', deleteObj);
       return await res.status(200).send(doc);
     } catch (error) {
       console.error(error);
