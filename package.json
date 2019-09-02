@@ -5,12 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "install-client-lib": "cd client && npm i",
-    "install-server-lib": "npm i",
+    "install-client": "cd client && npm i",
+    "install-server": "npm i",
     "client-dev": "npm start --prefix client",
     "server-dev": "nodemon server.js",
     "full-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
-    "build-prod": "(node del.build.js) && (cd client && npm run build) && (cd .. && node cp.build.js)",
+    "build-prod": "(node rm.build.js) && (cd client && npm run build) && (cd .. && node cp.build.js)",
     "install-winser": "winser -i -s -c",
     "uninstall-winser": "winser -r -x -s"
   },
